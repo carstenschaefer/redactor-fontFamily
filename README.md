@@ -16,7 +16,7 @@ Include fontFamily.js in your markup:
 ```
 
 Add some styles to your css:
-```html
+```css
 .redactor-toolbar li .re-icon.re-fontList{
     width:auto;
     text-transform: capitalize;
