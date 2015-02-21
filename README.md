@@ -1,9 +1,9 @@
 # redactor-fontFamily
-Adds a button to toolbar to change font family. Button shows current user choice or font family of current caret position (current selected text).
+Adds a button to the toolbar to change the font family. The button always displays the selected font family at the current caret position.
 
 A plugin developed for [Redactor](http://imperavi.com/redactor/), a WYSIWYG rich-text editor made by [imperavi](http://imperavi.com/).
 
-The example uses [Angular Redactor] (https://github.com/TylerGarlick/angular-redactor).
+The example uses [Angular Redactor](https://github.com/TylerGarlick/angular-redactor).
 
 Feel free to contribute to this repository.
 
