@@ -6,11 +6,11 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
     return {
       init: function () {
-        var fonts = ['Arial', 'Helvetica', 'Georgia', 'Times New Roman', 'Monospace'];
         var dropdown = {};
 
-        options = this.opts.fontFamily || { defaultFont: 'Arial' };
-
+        var options = this.opts.fontFamily || { defaultFont: 'Arial' };
+        var fonts = this.opts.fontFamily.fonts || ['Arial', 'Georgia', 'Times New Roman', 'Monospace'];
+        
         $.each(fonts, function (i, s) {
           dropdown['s' + i] = {
             title: s,
