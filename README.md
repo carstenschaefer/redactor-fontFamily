@@ -36,8 +36,9 @@ Configuration via HTML markup:
                             plugins: ['fontFamily'],
                             toolbarExternal: '#page-editor-toolbar',
                             fontFamily: {
-							  defaultFont : "Georgia"
-						    }
+                            	defaultFont : 'Georgia',
+								fonts: ['Arial', 'Comic Sans MS', 'Courier New', 'Georgia', 'Helvetica', 'Impact', 'Times New Roman', 'Monospace']
+							}
 						  }"></textarea>
  ````
  
