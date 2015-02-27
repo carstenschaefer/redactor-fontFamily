@@ -53,7 +53,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
       },
       caretChanged: function (t) {
-        var node = t.sel.focusNode.parentElement;
+        var node = t.sel.focusNode.nodeType == 3 ? t.sel.focusNode.parentNode : t.sel.focusNode;
         var font = window.getComputedStyle(node, null).getPropertyValue('font-family');
 
         font = font.replace(/['"]+/g, '');
