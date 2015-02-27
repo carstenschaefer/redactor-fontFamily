@@ -25,7 +25,16 @@ if (!RedactorPlugins) var RedactorPlugins = {};
         $(this.button.get('fontList')[0]).css('font-family', options.defaultFont);
         this.core.getElement()[0].style.fontFamily = options.defaultFont;
         this.button.addDropdown(button, dropdown);
-
+        
+        this.opts.dropdownShowCallback = function(dropdown, key, button)
+			  {
+				  if(dropdown.key === "fontList") {
+					  $(".redactor-dropdown-box-fontList").children().each(function (index, value) {
+						  $(value).css("font-family", value.text);  
+					  });
+				  }
+			  }
+			
         this.opts.clickCallback = function () {
           this.fontFamily.caretChanged(this);
         };
