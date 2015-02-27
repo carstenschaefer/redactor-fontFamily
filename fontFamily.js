@@ -2,7 +2,7 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 
 (function ($) {
   RedactorPlugins.fontFamily = function () {
-    var keys = [8,33,34,35,36,37,38,39,40];  
+    var keys = [8, 33, 34, 35, 36, 37, 38, 39, 40];
 
     return {
       init: function () {
@@ -25,16 +25,15 @@ if (!RedactorPlugins) var RedactorPlugins = {};
         $(this.button.get('fontList')[0]).css('font-family', options.defaultFont);
         this.core.getElement()[0].style.fontFamily = options.defaultFont;
         this.button.addDropdown(button, dropdown);
-        
-        this.opts.dropdownShowCallback = function(dropdown, key, button)
-			  {
-				  if(dropdown.key === "fontList") {
-					  $(".redactor-dropdown-box-fontList").children().each(function (index, value) {
-						  $(value).css("font-family", value.text);  
-					  });
-				  }
-			  }
-			
+
+        this.opts.dropdownShowCallback = function (dropdown, key, button) {
+          if (dropdown.key === "fontList") {
+            $(".redactor-dropdown-box-fontList").children().each(function (index, value) {
+              $(value).css("font-family", value.text);
+            });
+          }
+        }
+
         this.opts.clickCallback = function () {
           this.fontFamily.caretChanged(this);
         };
@@ -64,3 +63,4 @@ if (!RedactorPlugins) var RedactorPlugins = {};
     }
   };
 })(jQuery);
+
