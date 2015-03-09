@@ -23,9 +23,16 @@ if (!RedactorPlugins) var RedactorPlugins = {};
         var button = this.button.add('fontList', "Font");
         button[0].innerHTML = options.defaultFont;
         $(this.button.get('fontList')[0]).css('font-family', options.defaultFont);
-        this.core.getElement()[0].style.fontFamily = options.defaultFont;
         this.button.addDropdown(button, dropdown);
 
+		var editor = this.core.getElement()[0];
+		if(editor.firstChild == null){
+			editor.style.fontFamily = options.defaultFont;
+        }
+        else {
+			editor.firstChild.style.fontFamily = options.defaultFont;
+        }
+		
         this.opts.dropdownShowCallback = function (dropdown, key, button) {
           if (dropdown.key === "fontList") {
             $(".redactor-dropdown-box-fontList").children().each(function (index, value) {
